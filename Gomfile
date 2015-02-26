@@ -1,0 +1,7 @@
+gom 'github.com/guregu/kami'
+gom 'github.com/julienschmidt/httprouter'
+gom 'github.com/zenazn/goji/bind'
+gom 'github.com/zenazn/goji/graceful'
+gom 'github.com/zenazn/goji/graceful/listener'
+gom 'github.com/zenazn/goji/web/mutil'
+gom 'golang.org/x/net/context'
