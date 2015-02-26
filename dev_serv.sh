@@ -1,6 +1,12 @@
 #!/bin/sh
-
 CWD=$(cd $(dirname $0);pwd)
-export GOPATH="${CWD}/_vendor"
+cd "${CWD}"
 
-dev_appserver.py app.yaml
+export GOPATH="${CWD}/_vendor"
+#echo $GOPATH
+
+dev_appserver.py \
+	app.yaml \
+	--host 0.0.0.0 \
+	--enable_sendmail
+
