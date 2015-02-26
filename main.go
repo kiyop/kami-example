@@ -32,3 +32,14 @@ func init() {
 	ServeFiles("/files/*filepath", http.Dir("static-files"))
 	ServeFile("/favicon.ico", "static-files/favicon.ico")
 }
+
+/*
+TODO: まずはシンプルなコアライブラリと簡易レスポンダー
+TODO: コアライブラリと設定ファイルを全モジュールで共通化
+TODO: 環境判定と設定ファイル切り替え
+TODO: appengine のマルチモジュール対応
+TODO: マルチモジュール名の別ファイル化と環境別 app.yaml の共通化
+TODO: context とサービス層での循環参照問題
+TODO: 汎用レスポンダーとテンプレート処理
+TODO: カスタムエラーページ
+*/
