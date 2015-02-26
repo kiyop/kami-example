@@ -7,4 +7,4 @@ handlers:
 - url: /.*
   script: _go_app
 
-nobuild_files: ^_vendor/
+nobuild_files: ^_vendor
