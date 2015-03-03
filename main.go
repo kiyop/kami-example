@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "core/app"
 	"core/util/http/responder"
 
 	"net/http"
@@ -35,11 +36,9 @@ func init() {
 }
 
 /*
-TODO: コアライブラリと設定ファイルを全モジュールで共通化
-TODO: 環境判定と設定ファイル切り替え
+TODO: カスタムエラーページ
 TODO: appengine のマルチモジュール対応
 TODO: マルチモジュール名の別ファイル化と環境別 app.yaml の共通化
 TODO: context とサービス層での循環参照問題
 TODO: 汎用レスポンダーとテンプレート処理
-TODO: カスタムエラーページ
 */

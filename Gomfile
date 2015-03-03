@@ -1,3 +1,4 @@
+gom 'github.com/BurntSushi/toml'
 gom 'github.com/guregu/kami'
 gom 'github.com/julienschmidt/httprouter'
 gom 'github.com/zenazn/goji/bind'
