@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fmt"
+	"core/util/http/responder"
+
 	"net/http"
 
 	"github.com/guregu/kami"
@@ -23,7 +24,7 @@ func ServeFile(path, file string) {
 }
 
 func hello(ctx context.Context, w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %s!", kami.Param(ctx, "name"))
+	responder.Respond(w, "Hello, "+kami.Param(ctx, "name")+"!")
 }
 
 func init() {
@@ -34,7 +35,6 @@ func init() {
 }
 
 /*
-TODO: まずはシンプルなコアライブラリと簡易レスポンダー
 TODO: コアライブラリと設定ファイルを全モジュールで共通化
 TODO: 環境判定と設定ファイル切り替え
 TODO: appengine のマルチモジュール対応
